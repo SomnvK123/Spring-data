@@ -4,6 +4,7 @@ import com.example.spring_data.model.Product;
 import com.example.spring_data.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    @Transactional
     public void batchInsert(List<Product> products) {
         productRepository.batchInsert(products);
     }

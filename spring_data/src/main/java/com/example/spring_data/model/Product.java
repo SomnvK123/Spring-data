@@ -28,14 +28,6 @@ public class Product extends Auditing {
 
     private boolean isDeleted = false;
 
-    public boolean isDeleted() {
-        return isDeleted;
-    }
-
-    public void setDeleted(boolean deleted) {
-        isDeleted = deleted;
-    }
-
     public Product(int id, String name, String description, double price, int stockQuantity) {
         this.id = id;
         this.name = name;
